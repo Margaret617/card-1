@@ -1,0 +1,98 @@
+.about-mom {
+  background: #ffe6f0;
+  border-radius: 15px;
+  padding: 30px 25px;
+  max-width: 600px;
+  margin-top: 30px;
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.4);
+  color: #a8325a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.about-mom:hover {
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.7);
+}
+
+.about-mom h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #d6336c;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #ffb6c1;
+}
+
+.love-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.love-list li {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  position: relative;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.love-list li::before {
+  content: "❤️";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+.sweet-note-container {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+.sweet-note-container.expanded {
+  max-height: 1000px; /* large enough to show content */
+  opacity: 1;
+}
+
+.sweet-note h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #a8325a;
+}
+
+.sweet-note p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: #7a1f3d;
+}
+
+.note-button {
+  background: #d6336c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(214, 51, 108, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.note-button:hover {
+  background: #ff6f91;
+  box-shadow: 0 6px 18px rgba(255, 111, 145, 0.8);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

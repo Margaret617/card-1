@@ -1,0 +1,28 @@
+.butterfly-decoration {
+  position: absolute;
+  top: 50px;
+  width: 80px;
+  height: 300px;
+  opacity: 0.8;
+  animation: flutter 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.butterfly-left {
+  left: 10px;
+  animation-delay: 0s;
+}
+
+.butterfly-right {
+  right: 10px;
+  animation-delay: 2s;
+}
+
+@keyframes flutter {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(15px) rotate(10deg);
+  }
+}

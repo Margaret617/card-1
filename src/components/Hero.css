@@ -1,0 +1,113 @@
+.hero {
+  background: #ffe6f0;
+  border-radius: 15px;
+  padding: 40px 30px;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+  text-align: center;
+}
+
+.bouncing-text {
+  display: inline-block;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.note-button {
+  background: #d6336c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(214, 51, 108, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.note-button:hover {
+  background: #ff6f91;
+  box-shadow: 0 6px 18px rgba(255, 111, 145, 0.8);
+}
+
+.sweet-note-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, padding 0.6s ease;
+  padding: 0 10px;
+  margin-top: 0;
+}
+
+.sweet-note-container.expanded {
+  max-height: 1000px; /* large enough to show content */
+  padding: 20px 10px;
+  margin-top: 10px;
+}
+
+.about-mom {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.about-mom h2 {
+  color: #d6336c;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.love-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.love-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #a8325a;
+}
+
+.love-list li::before {
+  content: "❤️";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  color: #ff69b4; /* pink heart color */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+  .hero {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+
+  .note-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .about-mom h2 {
+    font-size: 1.4rem;
+  }
+
+  .love-list li {
+    font-size: 1rem;
+  }
+}
